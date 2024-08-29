@@ -1,0 +1,311 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* END OF CSS RESET */
+
+:root{
+    color-scheme: light dark;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: light-dark(#c1c1c1,#5a5a5a);
+    color: light-dark(#444,#fff);
+}
+div{
+    box-sizing: border-box;
+}
+.container{
+    max-width: 800px;
+    width: 80%;
+    min-width: 300px;
+    margin: 1rem auto;
+    background-color: light-dark(#ffffff,#444);
+    color: light-dark(#444,#fff);
+    box-shadow: rgba(0, 0, 0,0.35) 0px 5px 15px;
+    padding: 2rem;
+    box-sizing: border-box;
+    border-radius: 15px;
+    position: relative;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    border-bottom: 4px solid lightskyblue;
+    margin-bottom: 20px; 
+
+}
+.logo img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image: url(../img/logo/revou.jpg);  
+}
+header nav a :hover {
+    color: white;
+    background-color: lightskyblue;
+  }
+  
+header nav a {
+color: lightblue;  
+  text-decoration: none;
+    font-weight: 700;
+  }
+nav{
+    display: flex;
+    gap: 1.2em;
+    padding: calc((60px - 1rem ) / 2);
+}
+h1{
+    font: 700  1.5rem Arial, sans-serif;
+
+}
+.slide{
+    position: relative;
+}
+.slide img{
+    width: 100%;
+    margin: 1rem auto; 
+    border-radius: 15px; 
+    
+}
+
+.prev{
+  cursor: pointer;
+  position: absolute;
+  left: 3px;
+  top: calc(360px / 2);
+
+}
+.next{
+  cursor: pointer;
+  right: 3px;
+  top: calc(360px / 2);
+  position: absolute;
+}
+.our-project{
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border-top-right-radius: 40px; ;
+    border-bottom-left-radius: 40px; ;
+    border: 2px solid #5a5a5a;
+    padding: 15px;
+}
+.project{
+    display: flex;
+    flex-direction: column ;
+}
+.project img{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: rgba(189, 200, 211, 0.4) 0px 0px 0px 2px,
+     rgba(75, 77, 79, 0.65) 0px 4px 6px -1px,
+     rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.project h3{
+    font:normal 1.2rem cursive;
+    margin: auto;
+}
+
+.contact-us{
+    margin: 10px 0;
+    width: 100%;
+    border-top-right-radius: 40px; ;
+    border-bottom-left-radius: 40px; ;
+    border: 2px solid #5a5a5a;
+    padding: 15px;
+}
+
+label {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin: 10px 0;
+    text-shadow: 1cm;
+    text-decoration-color: aliceblue;
+    text-align: center;
+    color: #585858;
+  }
+.input {
+  -webkit-transition: width ease 0.2s, opacity ease 0.4s;
+  -moz-transition: width ease 0.2s, opacity ease 0.4s;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -webkit-box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.25),
+    inset 0px 1px 3px rgba(0, 0, 0, 0.7), 0px 1px 0px rgba(255, 255, 255, 0.03);
+  -moz-box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.25),
+    inset 0px 1px 3px rgba(0, 0, 0, 0.7), 0px 1px 0px rgba(255, 255, 255, 0.03);
+  -webkit-font-smoothing: antialiased;
+  text-align: left;
+  font: 13px "Helvetica Neue", Arial, sans-serif;
+  padding: 4px 10px;
+  border: none;
+  background: transparent;
+  margin-bottom: 0;
+  outline: none;
+  opacity: 0.7;
+  color: #888;
+}
+.input:focus {
+  width: 95%;
+  opacity: 1;
+  margin: auto;
+}
+.nama{
+  width: 58%;
+}
+.tgl-lahir .input{
+  width: 100px;
+}
+  .tgl-lahir:hover {
+    opacity: 1;
+    width: 70px;
+  }
+  .pesan {
+    width: 58%;
+    max-width: 95%;
+    max-height: 100px;
+  }
+  .tombol:hover {
+    opacity: 1;
+    color: #c6c6c6;
+  }
+  .tombol:active{
+    transform: translateY(2px);
+  }
+  .tombol {
+    -webkit-transition: width ease 0.2s, opacity ease 0.4s;
+    -moz-transition: width ease 0.2s, opacity ease 0.4s;
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25),
+      0px 1px 3px rgba(0, 0, 0, 0.7), 0px 1px 0px rgba(255, 255, 255, 0.03);
+    -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25),
+      0px 1px 3px rgba(0, 0, 0, 0.7), 0px 1px 0px rgba(255, 255, 255, 0.03);
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    font: 13px "Helvetica Neue", Arial, sans-serif;
+    padding: 4px 10px;
+    border: none;
+    background: transparent;
+    margin-bottom: 0;
+    outline: none;
+    opacity: 0.7;
+    color: #888;
+    margin: 10px 5px 0;
+  }
+
+footer {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-bottom-right-radius: 15px; ;
+    border-bottom-left-radius: 15px; ;
+    background-color: rgba(0, 0, 0, 0.822);
+    padding: 10px 20px;
+    color: blanchedalmond;
+    text-align: center;
+    box-sizing: border-box;
+    font: normal normal 300 14px/10px serif;
+  }
+  .hasil-form{
+    display: none;
+    position: absolute;
+    bottom: 53px;
+    right: 2.5rem;
+    left: 2.5rem;
+    z-index: 999;
+    height: 40vh;
+    font-family: Arial, sans-serif;
+    background-color: light-dark(#c1c1c1,#5a5a5a);
+    color: light-dark(#444,#fff);
+    border-top-right-radius: 40px; ;
+    border-bottom-left-radius: 40px; 
+    padding: 2rem;
+    line-height: 1.5;
+    animation: slideIn 0.5s ease-in-out;
+  }
+@keyframes slideIn {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+  @media only screen and (max-width: 600px) {
+     nav{
+      flex-direction: column;
+      justify-content: right;
+      height: 80px;
+      padding: 0;
+      align-items: flex-end
+  }
+  nav a{
+    line-height: 0.3rem;
+  }
+  .our-project{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .project{
+    margin: 20px;
+  }
+  .pesan , .nama{
+    width: 85%;
+  }
+  .lahir{
+    display: flex;
+    flex-direction: column;
+    align-items: start;    
+  }
+  }
